@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Main body of the arrow -->
+    <item android:right="20dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#0000FF"/> <!-- Blue color -->
+            <corners android:radius="20dp"/> <!-- Rounded corners -->
+        </shape>
+    </item>
+    <!-- Arrowhead -->
+    <item android:left="80dp">
+        <rotate
+            android:fromDegrees="45"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="45">
+            <shape android:shape="rectangle">
+                <solid android:color="#0000FF"/> <!-- Blue color -->
+            </shape>
+        </rotate>
+    </item>
+    <item android:left="80dp">
+        <rotate
+            android:fromDegrees="-45"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="-45">
+            <shape android:shape="rectangle">
+                <solid android:color="#0000FF"/> <!-- Blue color -->
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

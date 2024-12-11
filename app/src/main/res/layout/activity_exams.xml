@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Exams">
+
+    <!-- ImageButton for previous enrollment -->
+    <ImageButton
+        android:id="@+id/previousEnrollment"
+        android:layout_width="30dp"
+        android:layout_height="70dp"
+        android:contentDescription="Previous Profile Button"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <!-- ImageButton for next all attendance -->
+    <ImageButton
+        android:id="@+id/nextAllAttendance"
+        android:layout_width="30dp"
+        android:layout_height="70dp"
+        android:contentDescription="Next Profile Button"
+        android:rotation="180"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <!-- TextView for the title "Exams" -->
+    <TextView
+        android:id="@+id/exams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180sp"
+        android:text="Exams"
+        android:textColor="#AA711E"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView for displaying exam year -->
+    <TextView
+        android:id="@+id/yearExam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#AA711E"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exams" />
+
+    <!-- ScrollView for the TableLayout -->
+    <ScrollView
+        android:id="@+id/scrollViewExams"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/border"
+        android:padding="1dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yearExam">
+
+        <TableLayout
+            android:id="@+id/tableExams"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:padding="1dp">
+
+            <!-- TableRow for the header of the table -->
+            <TableRow
+                android:id="@+id/examMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1e3955"
+                android:orientation="horizontal"
+                android:padding="1dp">
+
+                <!-- TextViews for column headers -->
+                <TextView
+                    android:id="@+id/txtexam1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#1e3955"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Date"
+                    android:textColor="#AA711E"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/txtexam2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#1e3955"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Course"
+                    android:textColor="#AA711E"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtexam3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#1e3955"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Title"
+                    android:textColor="#AA711E"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtexam4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#1e3955"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Room"
+                    android:textColor="#AA711E"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#1e3955"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Mark"
+                    android:textColor="#AA711E"
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+            <!-- Additional rows for displaying exam data will be added dynamically or in code -->
+
+        </TableLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

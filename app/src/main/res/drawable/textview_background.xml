@@ -1,0 +1,20 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background shape (rectangle) -->
+    <item android:drawable="@android:color/transparent" />
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <!-- Line at top right -->
+    <item
+        android:right="0dp"
+        android:top="0dp"
+        android:left="60dp"
+        android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1e3955" /> <!-- Change color as needed -->
+            <size android:width="2dp" />
+        </shape>
+    </item>
+</layer-list>
